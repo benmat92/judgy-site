@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — Judgy</title>
+<meta name="description" content="What Judgy sends, stores, and never touches.">
+<link rel="icon" href="icon32.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="wordmark" href="index.html"><img src="icon32.png" alt="">Judgy</a>
+    <a href="index.html#how">How it judges</a>
+    <a href="index.html#faq">FAQ</a>
+  </div>
+</nav>
+
+<main class="prose">
+  <h1>Privacy</h1>
+  <p class="updated">Last updated: August 2026</p>
+
+  <p>Judgy's whole job is judging the page you ask it about. That requires sending some data to our server. This page says exactly what, when, and for how long — in plain English, because a privacy policy you can't read isn't one.</p>
+
+  <h2>When you click the button</h2>
+  <p>Clicking Judgy sends the current page's <b>visible content</b> (title, description, body text, reviews) and its <b>URL</b> to Judgy's server, which passes the content to Anthropic's Claude models to produce a score.</p>
+  <ul>
+    <li>The page content is used for the rating and <b>not stored</b>. Our database keeps only the URL, the score, and the written explanation.</li>
+    <li>Tracking parameters (like <code>utm_</code> tags) are stripped from URLs before anything is stored.</li>
+  </ul>
+
+  <h2>While you browse (the toolbar icon)</h2>
+  <p>So the icon can show a score on pages that have already been judged, Judgy checks visited page <b>URLs</b> against the existing score cache. This check sends <b>only the URL</b> — never the page content — and it never creates a new rating. Unmatched URLs are not recorded.</p>
+
+  <h2>What we store, and for how long</h2>
+  <ul>
+    <li><b>Scores and explanations</b>, keyed by cleaned URL. Product and general-page ratings expire after about 90 days; article ratings after about 180 days; ratings of frozen content (like a specific post) are kept so repeat visits stay instant.</li>
+    <li>That's the whole database. No accounts, no browsing history, no profiles of you.</li>
+  </ul>
+
+  <h2>What we never do</h2>
+  <ul>
+    <li>No ads, no analytics trackers, no selling or sharing data with anyone except Anthropic, whose models produce the ratings.</li>
+    <li>No reading pages you didn't ask about — page content leaves your browser only on your click.</li>
+    <li>No affiliate links. Judgy has no financial stake in what it scores, which is the entire point.</li>
+  </ul>
+
+  <h2>Third parties</h2>
+  <p>Page content submitted for rating is processed by <a href="https://www.anthropic.com/legal/privacy">Anthropic</a> under their privacy policy. That is the only third party involved.</p>
+
+  <h2>Questions</h2>
+  <p>Email <a href="mailto:hello@judgy.app">hello@judgy.app</a> and a human will answer.</p>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <a class="wordmark" href="index.html"><img src="icon32.png" alt="">Judgy</a>
+    <a href="privacy.html">Privacy</a>
+    <span class="legal">&copy; 2026 Judgy. One honest number.</span>
+  </div>
+</footer>
+
+</body>
+</html>

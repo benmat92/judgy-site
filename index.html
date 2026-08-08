@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Judgy — one honest number for whatever you're looking at</title>
+<meta name="description" content="Judgy is a Chrome extension that rates whatever a page is about — a product, an article, a post — on a 1–10 scale where 5 is the median and 9s are rare.">
+<link rel="icon" href="icon32.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="wordmark" href="/"><img src="icon32.png" alt="">Judgy</a>
+    <a href="#how">How it judges</a>
+    <a href="#faq">FAQ</a>
+    <a href="privacy.html">Privacy</a>
+    <a class="pill" data-store href="#">Add to Chrome <span class="arrow">&#8599;</span></a>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>One honest number for whatever you're looking at.</h1>
+  <p class="sub">Judgy reads the page you're on and gives the thing it's about a score out of 10. No grade inflation, no affiliate links, no mercy.</p>
+  <a class="pill big" data-store href="#">Add to Chrome — it's free <span class="arrow">&#8599;</span></a>
+  <p class="fine">Works on products, articles, posts, and everything in between.</p>
+</header>
+
+<!-- Tilted verdict cards: each ring fills with the score, in the same
+     instrument tones the extension uses. -->
+<div class="cards" aria-hidden="true">
+
+  <div class="vcard">
+    <div class="ring">
+      <svg viewBox="0 0 84 84">
+        <circle cx="42" cy="42" r="36" fill="none" stroke="var(--hairline)" stroke-width="7"/>
+        <circle cx="42" cy="42" r="36" fill="none" stroke="var(--deepmoss)" stroke-width="7"
+                stroke-linecap="round" stroke-dasharray="181 226.2"/>
+      </svg>
+      <div class="digit">8<small>/10</small></div>
+    </div>
+    <div class="what">Trail runners</div>
+    <div class="verdict">Worth the money</div>
+  </div>
+
+  <div class="vcard">
+    <div class="ring">
+      <svg viewBox="0 0 84 84">
+        <circle cx="42" cy="42" r="36" fill="none" stroke="var(--hairline)" stroke-width="7"/>
+        <circle cx="42" cy="42" r="36" fill="none" stroke="var(--ochre)" stroke-width="7"
+                stroke-linecap="round" stroke-dasharray="90.5 226.2"/>
+      </svg>
+      <div class="digit">4<small>/10</small></div>
+    </div>
+    <div class="what">A think-piece</div>
+    <div class="verdict">Padding, mostly</div>
+  </div>
+
+  <div class="vcard">
+    <div class="ring">
+      <svg viewBox="0 0 84 84">
+        <circle cx="42" cy="42" r="36" fill="none" stroke="var(--hairline)" stroke-width="7"/>
+        <circle cx="42" cy="42" r="36" fill="none" stroke="var(--deepmoss)" stroke-width="7"
+                stroke-linecap="round" stroke-dasharray="203.6 226.2"/>
+      </svg>
+      <div class="digit">9<small>/10</small></div>
+    </div>
+    <div class="what">An essay</div>
+    <div class="verdict">Rare air</div>
+  </div>
+
+  <div class="vcard">
+    <div class="ring">
+      <svg viewBox="0 0 84 84">
+        <circle cx="42" cy="42" r="36" fill="none" stroke="var(--hairline)" stroke-width="7"/>
+        <circle cx="42" cy="42" r="36" fill="none" stroke="var(--brick)" stroke-width="7"
+                stroke-linecap="round" stroke-dasharray="45.2 226.2"/>
+      </svg>
+      <div class="digit">2<small>/10</small></div>
+    </div>
+    <div class="what">A viral thread</div>
+    <div class="verdict">Vibes, no substance</div>
+  </div>
+
+  <div class="vcard">
+    <div class="ring">
+      <svg viewBox="0 0 84 84">
+        <circle cx="42" cy="42" r="36" fill="none" stroke="var(--hairline)" stroke-width="7"/>
+        <circle cx="42" cy="42" r="36" fill="none" stroke="var(--moss)" stroke-width="7"
+                stroke-linecap="round" stroke-dasharray="158.3 226.2"/>
+      </svg>
+      <div class="digit">7<small>/10</small></div>
+    </div>
+    <div class="what">Noise-cancelling buds</div>
+    <div class="verdict">Genuinely good</div>
+  </div>
+
+</div>
+
+<section id="how">
+  <div class="wrap">
+    <p class="kicker">How it judges</p>
+    <h2>Point. Click. Judged.</h2>
+    <div class="grid">
+      <div class="chip">
+        <span class="glyph">&#128064;</span>
+        <h3>It reads what you're reading</h3>
+        <p>One click sends the page's visible content — specs, reviews, the actual writing — to be judged. Nothing happens until you click.</p>
+      </div>
+      <div class="chip">
+        <span class="glyph">&#128203;</span>
+        <h3>It knows what it's looking at</h3>
+        <p>A product gets judged like a product. An essay gets judged like an essay. Each kind of thing is held to its own standard.</p>
+      </div>
+      <div class="chip">
+        <span class="glyph">&#127919;</span>
+        <h3>It can't be sweet-talked</h3>
+        <p>Marketing adjectives don't move the number. Disclosed materials, real evidence, and track record do.</p>
+      </div>
+      <div class="chip">
+        <span class="glyph">&#128172;</span>
+        <h3>It shows its work</h3>
+        <p>Click <b>say more</b> and Judgy explains the verdict — what earned the score and what cost it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="scale-panel">
+      <h2>5 is the median, not an insult.</h2>
+      <p class="sub">Half of everything is below average — Judgy just says so out loud. 9s are rare. 10s are folklore.</p>
+      <div class="bars" aria-hidden="true">
+        <i class="bad" style="height:8%"></i>
+        <i class="bad" style="height:16%"></i>
+        <i class="bad" style="height:30%"></i>
+        <i class="mid" style="height:60%"></i>
+        <i class="mid" style="height:100%"></i>
+        <i class="good" style="height:82%"></i>
+        <i class="good" style="height:58%"></i>
+        <i class="good" style="height:34%"></i>
+        <i class="good" style="height:14%"></i>
+        <i class="good" style="height:5%"></i>
+      </div>
+      <div class="bar-labels">
+        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+        <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <p class="kicker">Questions</p>
+    <h2>Fair questions, honest answers.</h2>
+    <div class="faq">
+      <details>
+        <summary>What does Judgy actually rate?</summary>
+        <p>The <b>thing the page is about</b> — the product, the article, the post — never the page's design, its photography, or its price. A beautiful listing for a mediocre product gets a mediocre score.</p>
+      </details>
+      <details>
+        <summary>Why did it give my favorite thing a 6?</summary>
+        <p>Because 6 means "genuinely above average," and most good things are exactly that. Judgy holds the top of the scale for the exceptional, so the numbers keep meaning something.</p>
+      </details>
+      <details>
+        <summary>What won't it rate?</summary>
+        <p>Paywalled articles it can't actually read, private people's profile pages, and browser-internal pages. If Judgy can't see the real thing, it declines rather than guessing.</p>
+      </details>
+      <details>
+        <summary>What data leaves my browser?</summary>
+        <p>Page content is only sent when you click the button. In the background, Judgy checks visited URLs (just the address, never the content) against already-issued scores so the toolbar icon can light up. No accounts, no ads, no selling data. Full details in the <a href="privacy.html">privacy policy</a>.</p>
+      </details>
+      <details>
+        <summary>Is it free?</summary>
+        <p>Yes — every day you get a batch of free judgments, and pages that have already been judged never count against it. If you're a heavy judge, <b>Judgy Plus</b> ($20/month) raises the daily cap about 25-fold, cancellable any time.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-panel">
+      <h2>Stop wondering. Start judging.</h2>
+      <a class="pill big" data-store href="#">Add Judgy to Chrome <span class="arrow">&#8599;</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <a class="wordmark" href="/"><img src="icon32.png" alt="">Judgy</a>
+    <a href="privacy.html">Privacy</a>
+    <span class="legal">&copy; 2026 Judgy. One honest number.</span>
+  </div>
+</footer>
+
+<script>
+  // Single source of truth for the store link. Replace with the real
+  // Chrome Web Store listing URL after the extension is published.
+  const STORE_URL = "https://chromewebstore.google.com/";
+  document.querySelectorAll("[data-store]").forEach(a => { a.href = STORE_URL; });
+</script>
+</body>
+</html>
